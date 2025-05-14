@@ -93,9 +93,9 @@ struct CustomizableOTPView: View {
             if index == otpDigits.count - 1 {
                 focusedIndex = nil // close keyboard when last digit is entered
             } else {
-                focusedIndex = (focusedIndex ?? 0) + 1
+                focusedIndex = (focusedIndex ?? 0) + 1 // move forward
             }
-        } else { // backspace is pressed, go back
+        } else { // backspace is pressed, move backward
             focusedIndex = (focusedIndex ?? 0) - 1
         }
     }
